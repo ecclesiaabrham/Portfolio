@@ -6,7 +6,7 @@ I'm a third-year Software Engineering student at **Addis Ababa Science and Techn
 
 This repository contains the source code for my personal portfolio website, where I showcase my background, skills, academic journey, and projects.
 
-## 👨‍💻 About Me
+## About Me
 
 - **Name:** Akleshiya Abrham
 - **University:** Addis Ababa Science and Technology University
