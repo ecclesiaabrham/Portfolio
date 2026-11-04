@@ -23,6 +23,9 @@
 
   <body>
     <header>
+      <canvas id="logo" width="120" height="120">
+        Akleshiya Abrham logo
+      </canvas>
       <h1>Akleshiya Abrham</h1>
 
       <img src="images/profile.jpg" alt="A photo of Akleshiya" width="200" />
@@ -214,7 +217,11 @@
           </meter>
           20%
         </p>
+        <h3>My Skill Chart</h3>
 
+        <canvas id="skill-chart" width="300" height="150">
+          A chart showing my programming skill levels.
+        </canvas>
         <h3>My Learning Roadmap</h3>
 
         <ol type="1">
@@ -617,4 +624,50 @@ int main() {
       <time datetime="2026-11-04">4 November 2026</time>
     </p>
   </body>
+  <script>
+    const canvas = document.getElementById("logo");
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect(0, 0, 120, 120);
+    ctx.beginPath();
+
+    ctx.arc(60, 60, 45, 0, Math.PI * 2);
+
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.fillStyle = "blue";
+    ctx.font = "bold 32px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText("AA", 60, 60);
+  </script>
+
+  <script>
+    const chart = document.getElementById("skill-chart");
+    const chartCtx = chart.getContext("2d");
+
+    const skills = [
+      { name: "HTML", value: 45 },
+      { name: "Python", value: 10 },
+      { name: "JavaScript", value: 40 },
+      { name: "C++", value: 40 },
+    ];
+
+    skills.forEach((skill, index) => {
+      const barHeight = (skill.value / 100) * 120;
+
+      const x = 20 + index * 70;
+      const y = 130 - barHeight;
+
+      chartCtx.fillStyle = "blue";
+      chartCtx.fillRect(x, y, 35, barHeight);
+
+      chartCtx.fillStyle = "black";
+      chartCtx.font = "12px Arial";
+      chartCtx.textAlign = "center";
+      chartCtx.fillText(skill.name, x + 17.5, 145);
+    });
+  </script>
 </html>
