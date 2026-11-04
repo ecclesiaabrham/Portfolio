@@ -29,6 +29,31 @@
 
       <p>Software Engineering student and aspiring web developer.</p>
 
+      <button
+        type="button"
+        onclick="document.getElementById('hire-dialog').showModal()"
+      >
+        Hire me
+      </button>
+
+      <dialog id="hire-dialog">
+        <h2>Available for internships</h2>
+
+        <p>
+          I am available for internships and freelance web projects from June
+          2027.
+        </p>
+
+        <p>Send me a message or download my CV.</p>
+
+        <button
+          type="button"
+          onclick="document.getElementById('hire-dialog').close()"
+        >
+          Close
+        </button>
+      </dialog>
+
       <nav>
         <a href="#about">About</a> | <a href="#skills">Skills</a> |
         <a href="#projects">Projects</a> | <a href="#education">Education</a> |
@@ -158,6 +183,32 @@
           </li>
         </ul>
 
+        <h3>Skill Levels</h3>
+
+        <p>
+          HTML:
+          <meter min="0" max="100" value="80" low="30" high="70" optimum="100">
+            80%
+          </meter>
+          80%
+        </p>
+
+        <p>
+          Python:
+          <meter min="0" max="100" value="70" low="30" high="70" optimum="100">
+            70%
+          </meter>
+          70%
+        </p>
+
+        <p>
+          JavaScript:
+          <meter min="0" max="100" value="20" low="30" high="70" optimum="100">
+            20%
+          </meter>
+          20%
+        </p>
+
         <h3>My Learning Roadmap</h3>
 
         <ol type="1">
@@ -254,7 +305,10 @@ int main() {
         <h3>BSc in Software Engineering</h3>
 
         <p>Addis Ababa Science and Technology University.</p>
+        <p>Degree progress:</p>
 
+        <progress value="40" max="100">40%</progress>
+        40%
         <table border="1" cellpadding="8" cellspacing="0">
           <caption>
             Academic Record — BSc in Software Engineering
